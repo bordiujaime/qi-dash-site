@@ -54,7 +54,7 @@ html[data-theme="dark"] .stock-price-note{background:#203b2e;border-color:#304a3
   <nav class="view-tabs" aria-label="Analysis views"><button type="button" class="view-tab active" id="tabMain" aria-selected="true">Monthly Portfolio</button><button type="button" class="view-tab" id="tabHistory" aria-selected="false" hidden>Historical Analysis</button><button type="button" class="view-tab" id="tabMonteCarlo" aria-selected="false" hidden>Monte Carlo &amp; Risk</button><button type="button" class="view-tab" id="tabStockPerformance" aria-selected="false">Since First Pick</button></nav>
   <section id="mainPanel" class="view-panel">
   <header class="intro"><p class="eyebrow">Strategy performance</p><h1>Your monthly portfolio, at a glance.</h1><p>Explore how the recommendations performed against the S&amp;P 500 and review each month’s picks.</p></header>
-  <div class="monthly-logic"><span class="monthly-logic-mark" aria-hidden="true">↻</span><div><strong>Results through Sep 2026 · Oct 2026 recommendations</strong>Portfolio and benchmark returns, recommendations, historical cohorts and stock comparisons are generated from the latest workbook. A return marked pending is not yet available in the source file.</div></div>
+  <div class="monthly-logic"><span class="monthly-logic-mark" aria-hidden="true">↻</span><div><strong>Resultados hasta Sep 2026 · recomendaciones de Oct 2026</strong>Las rentabilidades de la cartera y del índice, las recomendaciones y las comparativas se generan desde el Excel más reciente. Los resultados pendientes aún no figuran en el archivo.</div></div>
   <section class="section-card recommendations current-picks" aria-labelledby="recommendationTitle"><div class="section-head"><div><p class="eyebrow">Current focus</p><h2 id="recommendationTitle">This month’s selected stocks</h2><p id="recommendationSubtitle"></p></div><div class="field"><label for="detailMonth">View recommendations for</label><select class="month-picker" id="detailMonth" aria-label="Recommendation month"></select></div></div><div class="rec-list" id="recommendationList" aria-live="polite"></div></section>
   <section class="controls" aria-label="Chart date range">
     <div class="field"><label for="fromMonth">Start month</label><input type="month" id="fromMonth"></div>
@@ -288,7 +288,7 @@ rankingYear.addEventListener('change',renderRanking);
 document.getElementById('rankingCount').addEventListener('change',renderRanking);
 detail.addEventListener('change',renderRecommendations);
 new ResizeObserver(()=>renderChart(getRange())).observe(chartbox);
-document.getElementById('coverage').textContent=`Monthly returns available: ${DATA.first}—${DATA.last}. Recommendations for ${DATA.latestLabel} are available, but their future returns are pending.`;
+const isSpanish=document.documentElement.lang==='es';document.getElementById('coverage').textContent=isSpanish?'Rentabilidades mensuales disponibles: '+DATA.first+'—'+DATA.last+'. Las recomendaciones de '+DATA.latestLabel+' están disponibles; sus rentabilidades futuras siguen pendientes.':'Monthly returns available: '+DATA.first+'—'+DATA.last+'. Recommendations for '+DATA.latestLabel+' are available, but their future returns are pending.';
 document.getElementById('sourceNote').textContent=`${validMonths.length} months with returns · through ${lastDate}`;
 renderRecommendations();renderAnnual();renderRanking();renderLatestSnapshot();update();
 
