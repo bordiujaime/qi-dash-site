@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f6f1">
+<meta name="description" content="Q Investment: investigación cuantitativa, selección mensual de acciones y seguimiento transparente de la metodología.">
+<link rel="alternate" hreflang="es" href="strategy.html">
+<link rel="alternate" hreflang="en" href="strategy-en.html">
+<title>Q Investment · La estrategia Qi</title>
+<style>
+.research-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:34px}.research-card{background:#fff;border:1px solid #dce6dc;border-radius:17px;padding:24px 24px 22px}.research-card .evidence-label{font-size:10px;text-transform:uppercase;letter-spacing:.11em;color:var(--green);font-weight:750}.research-card h3{font:500 23px/1.2 Georgia,serif;margin:12px 0 9px}.research-card p{font-size:12px;color:var(--muted);line-height:1.8;margin:0}.research-number{font:500 32px/1.1 Georgia,serif;letter-spacing:-.04em;color:var(--green-dark);margin:15px 0 3px}.research-number-caption{font-size:10px;color:var(--muted);margin-bottom:13px}.research-stats{display:flex;gap:8px;margin-top:17px}.research-stat{flex:1;min-width:0;padding:10px 8px;border-radius:9px;background:#f1f5f1;text-align:center}.research-stat strong{display:block;font:500 18px Georgia,serif;color:var(--green-dark)}.research-stat span{display:block;margin-top:3px;color:#6a7b71;font-size:9px}.research-caveat{margin-top:16px;padding:14px 16px;border-left:3px solid #87ab91;background:#f7f8f4;color:#627269;font-size:11px;line-height:1.8}.research-links{margin:15px 0 0;color:#748179;font-size:10px;line-height:1.9}.research-links a{color:var(--green-dark);text-decoration:underline;text-underline-offset:2px}.research-links a:hover{color:var(--green)}@media(max-width:850px){.research-grid{grid-template-columns:1fr 1fr}.research-grid .research-card:last-child{grid-column:1/-1}}@media(max-width:600px){.research-grid{grid-template-columns:1fr}.research-grid .research-card:last-child{grid-column:auto}.research-card{padding:21px}.research-stats{gap:6px}}
+:root{--ink:#14231d;--muted:#63736b;--paper:#f5f6f1;--surface:#fff;--line:#e3e9e2;--green:#147b5a;--green-dark:#0d4d3a;--mint:#dcefe4;--blue:#9cb9c9;--shadow:0 24px 70px rgba(25,54,39,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.6 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(20,35,29,.08)}.brand{display:flex;align-items:center;gap:11px;font-weight:740;letter-spacing:-.035em;font-size:18px}.mark{width:36px;height:36px;display:grid;place-items:center;background:var(--green-dark);color:#fff;border-radius:12px;font:700 16px/1 Georgia,serif}.navlinks{display:flex;align-items:center;gap:23px;color:#54655c;font-size:13px}.language-picker{display:flex;align-items:center;gap:4px;padding:3px;border:1px solid var(--line);border-radius:10px;background:#fff;flex-shrink:0}.language-picker a{display:inline-flex;align-items:center;gap:4px;border-radius:7px;padding:6px 7px;color:#68776e;font-size:11px;font-weight:650}.language-picker a.active{background:#eaf2ec;color:var(--green-dark)}.language-picker a:hover{background:#f1f5f1}.navlinks a:hover{color:var(--green)}.nav-cta,.button{display:inline-flex;justify-content:center;align-items:center;gap:9px;border-radius:9px;padding:11px 16px;font-size:13px;font-weight:650;transition:transform .2s,background .2s}.nav-cta,.button.primary{background:var(--green-dark);color:#fff}.nav-cta:hover,.button.primary:hover{background:var(--green);transform:translateY(-1px)}.button.secondary{border:1px solid #d9e1db;background:rgba(255,255,255,.68);color:var(--ink)}.button.secondary:hover{border-color:#9eb8a8;background:#fff}.hero{display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center;padding:76px 0 82px}.eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.13em;font-size:10px;font-weight:750;color:var(--green)}.eyebrow:before{content:"";width:19px;height:1px;background:var(--green)}h1,h2,h3,p{margin-top:0}h1{font:500 clamp(44px,6vw,72px)/1.02 Georgia,"Times New Roman",serif;letter-spacing:-.055em;margin:20px 0 19px;max-width:620px}h1 em{color:var(--green);font-style:normal}.hero-copy{font-size:16px;color:#596a61;max-width:520px;line-height:1.75}.actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:27px}.hero-note{font-size:11px;color:#77857d;margin-top:18px}.hero-visual{position:relative;min-height:430px;border:1px solid rgba(20,35,29,.08);border-radius:24px;overflow:hidden;background:radial-gradient(circle at 78% 13%,#d8ebe0 0,transparent 35%),linear-gradient(145deg,#e7efe8,#f9faf6 60%,#edf2eb);box-shadow:var(--shadow)}.visual-label{position:absolute;top:24px;left:27px;font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:#74847a;font-weight:700}.visual-period{position:absolute;top:48px;left:27px;font:21px Georgia,serif;color:#20352b}.visual-svg{position:absolute;inset:91px 5px 16px;width:calc(100% - 10px);height:300px}.float-card{position:absolute;right:23px;top:100px;padding:13px 15px;background:#ffffffdb;border:1px solid #fff;border-radius:13px;box-shadow:0 8px 24px #263a2e17;backdrop-filter:blur(8px)}.float-card small{display:block;color:#738179;font-size:9px;text-transform:uppercase;letter-spacing:.08em}.float-card strong{font-size:18px;color:var(--green-dark)}.selection-card{position:absolute;bottom:20px;left:22px;right:22px;padding:13px 15px;border:1px solid #ffffffc4;border-radius:13px;background:#ffffffd9;display:flex;justify-content:space-between;align-items:center;gap:10px;backdrop-filter:blur(8px)}.selection-card span{font-size:11px;color:#718078}.tickers{display:flex;gap:5px}.ticker{width:29px;height:29px;border-radius:8px;background:#eff4ef;display:grid;place-items:center;color:#315644;font-size:8px;font-weight:750}.ticker:nth-child(2n){background:#e3eee8}.metrics{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 8px 28px rgba(25,54,39,.04);margin-top:-2px}.metric{padding:22px 24px;border-right:1px solid var(--line)}.metric:last-child{border:0}.metric strong{display:block;font:500 25px/1.2 Georgia,serif;letter-spacing:-.03em}.metric span{display:block;color:var(--muted);font-size:11px;margin-top:5px}.section{padding:96px 0}.section-kicker{font-size:10px;text-transform:uppercase;letter-spacing:.14em;font-weight:750;color:var(--green);margin-bottom:11px}.section-title{font:500 clamp(34px,4vw,48px)/1.1 Georgia,serif;letter-spacing:-.04em;margin-bottom:13px}.section-lede{max-width:670px;color:var(--muted);font-size:14px;line-height:1.8}.intro-row{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:38px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.step{padding:23px 24px 26px;background:#fff;border:1px solid var(--line);border-radius:15px;min-height:210px}.step-no{font:italic 17px Georgia,serif;color:var(--green)}.step h3{font:500 21px Georgia,serif;margin:22px 0 8px}.step p{font-size:12px;color:var(--muted);line-height:1.75;margin:0}.evidence{background:#eaf0e9}.evidence-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:35px}.evidence-card{background:#fff;border:1px solid #dce6dc;border-radius:17px;padding:26px 27px}.evidence-label{font-size:10px;text-transform:uppercase;letter-spacing:.11em;color:var(--green);font-weight:750}.evidence-card h3{font:500 24px Georgia,serif;margin:12px 0 10px}.evidence-card p{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:0}.evidence-card .tag{display:inline-block;border-radius:20px;padding:5px 9px;background:#edf4ee;color:#486956;font-size:10px;margin-top:18px}.dashboard-cta{display:grid;grid-template-columns:1fr auto;gap:25px;align-items:center;background:var(--green-dark);color:#fff;padding:33px 38px;border-radius:19px}.dashboard-cta .section-kicker{color:#a9d6bd}.dashboard-cta h2{font:500 30px Georgia,serif;margin:6px 0}.dashboard-cta p{color:#c8ddd1;font-size:12px;margin:0;max-width:570px}.dashboard-cta .button{background:#fff;color:#173d2d;white-space:nowrap}.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}.about-copy{font:20px/1.6 Georgia,serif;color:#354c40}.about-detail{color:var(--muted);font-size:13px;line-height:1.9}.contact{padding-top:0}.contact-box{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:28px 30px;border:1px solid var(--line);background:#fff;border-radius:16px}.contact-box h2{font:500 27px Georgia,serif;margin:0}.contact-box p{color:var(--muted);font-size:12px;margin:5px 0 0}.contact-placeholder{font-size:12px;color:#53685c;background:#f1f5f1;border-radius:8px;padding:10px 13px}.disclosure{border-top:1px solid var(--line);padding:22px 0 28px;color:#78857e;font-size:10px;line-height:1.7}.footer{border-top:1px solid var(--line);padding:18px 0 27px;color:#77857d;font-size:10px;display:flex;justify-content:space-between;gap:20px}.footer b{color:#41554a}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:35px;padding:57px 0}.hero-visual{min-height:380px}.visual-svg{height:260px}.metrics{grid-template-columns:repeat(2,1fr)}.metric:nth-child(2){border-right:0}.metric:nth-child(-n+2){border-bottom:1px solid var(--line)}.section{padding:72px 0}.about-grid{gap:30px}.navlinks{gap:16px}}
+@media(max-width:600px){.wrap{width:calc(100% - 30px)}.nav{height:67px}.navlinks a:not(.nav-cta){display:none}.nav-cta{padding:9px 11px;font-size:11px}.brand{font-size:16px}.hero{padding:49px 0 61px}h1{font-size:49px}.hero-copy{font-size:14px}.hero-visual{min-height:340px}.visual-svg{height:230px;top:82px}.float-card{top:80px;right:13px}.selection-card{left:13px;right:13px;bottom:13px;padding:10px}.metrics{margin:0}.metric{padding:16px 15px}.metric strong{font-size:22px}.intro-row{display:block}.steps,.evidence-grid{grid-template-columns:1fr}.step{min-height:0}.step h3{margin-top:12px}.section{padding:60px 0}.dashboard-cta{grid-template-columns:1fr;padding:26px 23px}.dashboard-cta .button{justify-self:start}.about-grid{grid-template-columns:1fr;gap:15px}.about-copy{font-size:18px}.contact-box{align-items:flex-start;flex-direction:column;padding:22px}.footer{display:block}.footer span{display:block;margin-top:5px}}
+
+.qi-strategy{background:#eaf0e9}.qi-strategy .wrap{max-width:1160px}.qi-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:stretch}.qi-intro,.qi-summary,.qi-family,.qi-panel{background:#fff;border:1px solid #dce6dc;border-radius:17px;padding:25px}.qi-intro{padding:30px}.qi-lead{font:21px/1.5 Georgia,serif;color:#354c40;max-width:740px}.qi-summary{display:grid;align-content:center;gap:12px}.qi-summary strong{font:500 32px Georgia,serif;color:var(--green-dark)}.qi-summary span{font-size:12px;color:var(--muted)}.qi-badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}.qi-badge{padding:6px 10px;border-radius:20px;background:#edf4ee;color:#486956;font-size:10px;font-weight:700}.qi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}.qi-family h3{font:500 23px Georgia,serif;margin:8px 0}.qi-family p{font-size:12px;color:var(--muted);line-height:1.75}.qi-family .qi-mix{font-size:11px;color:#486956;padding-top:10px;border-top:1px solid var(--line)}.qi-tables{display:grid;grid-template-columns:1fr;gap:18px;margin-top:28px}.qi-panel h3{font:500 23px Georgia,serif;margin:5px 0 9px}.qi-panel>p{font-size:12px;color:var(--muted);line-height:1.75}.qi-table-wrap{overflow:auto}.qi-table{width:100%;border-collapse:collapse;font-size:11px;text-align:right;white-space:nowrap}.qi-table th,.qi-table td{padding:10px 11px;border-bottom:1px solid #e6ece6}.qi-table th{color:#52705e;background:#f5f8f4;font-size:10px}.qi-table th:first-child,.qi-table td:first-child{text-align:left}.qi-table tr:last-child td{border-bottom:0}.qi-table .period td:first-child{font-weight:700;color:var(--green-dark)}.qi-note{padding:14px 16px;border-left:3px solid #87ab91;background:#f7f8f4;color:#627269;font-size:11px;line-height:1.8;margin-top:17px}.qi-details{border-top:1px solid var(--line);margin-top:16px;padding-top:13px}.qi-details summary{cursor:pointer;color:var(--green-dark);font-size:12px;font-weight:700}.qi-details p,.qi-details li{font-size:11px;line-height:1.8;color:var(--muted)}.qi-details ul{padding-left:19px}.qi-tip{display:inline-block;position:relative;vertical-align:middle;margin-left:3px}.qi-tip summary{list-style:none;cursor:pointer;width:18px;height:18px;display:inline-grid;place-items:center;border:1px solid #8ba795;border-radius:50%;font:700 11px/1 sans-serif;color:var(--green-dark);background:#f5f9f5}.qi-tip summary::-webkit-details-marker{display:none}.qi-tip summary:focus-visible{outline:2px solid var(--green);outline-offset:2px}.qi-tip span{display:none;position:fixed;z-index:9999;left:12px;top:12px;width:min(290px,calc(100vw - 24px));max-height:calc(100vh - 24px);overflow-y:auto;white-space:normal;padding:12px 14px;border-radius:10px;background:#173d2d;color:#fff;font:11px/1.65 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;box-shadow:0 8px 22px #14231d30}.qi-tip:not([data-dismissed="true"]):hover span,.qi-tip:not([data-dismissed="true"]):focus-within span,.qi-tip[open] span{display:block}.qi-glossary{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:15px}.qi-glossary article{padding:14px;border-radius:11px;background:#f3f6f2}.qi-glossary b{font-size:12px;color:var(--green-dark)}.qi-glossary p{font-size:10px;color:var(--muted);line-height:1.65;margin:5px 0 0}.qi-chart-label{display:inline-flex;gap:8px;align-items:center;font-size:10px;color:var(--muted)}.qi-dot{width:8px;height:8px;border-radius:50%;background:#147b5a}.qi-dot.audit{background:#c08944}@media(max-width:800px){.qi-hero{grid-template-columns:1fr}.qi-grid{grid-template-columns:1fr}.qi-glossary{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.qi-intro,.qi-summary,.qi-family,.qi-panel{padding:19px}.qi-glossary{grid-template-columns:1fr}.qi-strategy.section{padding:58px 0}}
+</style>
+<style>
+@media(max-width:600px){html{overflow-x:hidden}.wrap{max-width:100%}.nav{gap:8px}.navlinks{flex:0 1 auto;min-width:0}.nav-cta{white-space:nowrap}.language-picker{flex-shrink:0}.qi-intro,.qi-summary,.qi-family,.qi-panel{min-width:0}.qi-table-wrap{max-width:100%;overscroll-behavior-x:contain}.qi-glossary{min-width:0}.qi-tip span{left:12px;right:12px;transform:none;width:auto}}
+.qi-legal{margin:22px 0 30px;padding:15px 17px;border-left:3px solid var(--green);background:#f7f8f4;color:#53645a;font-size:12px;line-height:1.75}.qi-legal strong{color:var(--green-dark)}.qi-explorer{margin-top:20px}.qi-explorer-controls{display:flex;gap:13px;flex-wrap:wrap;align-items:end;margin:17px 0 14px}.qi-explorer-controls label{display:grid;gap:5px;color:var(--muted);font-size:11px;font-weight:650}.qi-explorer-controls select{min-width:180px;height:39px;padding:0 11px;border:1px solid var(--line);border-radius:9px;background:#fff;color:var(--ink);font:inherit}.qi-explorer-chart{display:block;width:100%;height:auto;min-height:290px;background:#fbfcfa;border:1px solid var(--line);border-radius:12px}.qi-explorer-note{margin:12px 0 0;color:var(--muted);font-size:11px;line-height:1.7}.qi-explorer-live{margin:10px 0 0;color:#43594c;font-size:12px;font-weight:650}.qi-chart-grid{stroke:#e3e9e2;stroke-width:1}.qi-chart-axis{fill:#66766d;font-size:11px}.qi-chart-value{fill:#14231d;font-size:12px;font-weight:650}.qi-chart-name{fill:#304b3d;font-size:12px;font-weight:650}.qi-chart-bar{fill:#147b5a}.qi-chart-bar.benchmark{fill:#9cb9c9}@media(max-width:600px){.qi-explorer-controls{display:grid;grid-template-columns:1fr}.qi-explorer-controls select{width:100%;min-width:0}.qi-explorer-chart{min-height:250px}}
+</style>
+</head>
+<body>
+<header class="wrap nav">
+<a class="brand" href="index.html" aria-label="Q Investment, inicio">
+<span class="mark">Q</span>
+<span>Q Investment</span>
+</a>
+<nav class="navlinks" aria-label="Navegación principal">
+<a href="index.html">Inicio</a>
+<a href="dashboard-es.html">Dashboard</a>
+<a class="nav-cta" href="#estrategia">La estrategia Qi</a>
+</nav>
+<div class="language-picker" role="group" aria-label="Seleccionar idioma">
+<a class="active" href="strategy.html" lang="es" aria-label="Español">🇪🇸 <span>ES</span>
+</a>
+<a href="strategy-en.html" lang="en" aria-label="English">🇺🇸 <span>EN</span>
+</a>
+</div>
+</header>
+<main>
+<section class="qi-strategy section" id="estrategia">
+<div class="wrap">
+<div class="section-kicker">QI FUNDS · METODOLOGÍA Y RESULTADOS</div>
+<h2 class="section-title">La estrategia Qi</h2>
+<p class="section-lede">Qi parte de una selección sistemática de acciones y la combina de tres maneras distintas. Así se crean carteras con diferentes niveles de exposición a la bolsa. Primero explicamos el proceso; después, qué muestran los resultados y qué conviene tener en cuenta al interpretarlos.</p>
+<p class="qi-legal"><strong>Información general, no asesoramiento de inversión.</strong> Esta página describe una propuesta teórica basada en datos históricos. No es una recomendación personalizada, una oferta, una solicitud ni una invitación a comprar, vender o mantener instrumentos financieros. Cada persona debe valorar sus circunstancias, objetivos y tolerancia al riesgo y, cuando corresponda, consultar a un profesional autorizado.</p>
+<div class="qi-hero">
+<article class="qi-intro">
+<p class="qi-lead">El punto de partida es el <strong>Inertial Synthetic Index (ISI)</strong>, un sistema cuantitativo que cada mes ordena acciones estadounidenses de gran capitalización según la persistencia relativa de su comportamiento reciente. La selección resultante se combina con otros activos para construir carteras más defensivas, intermedias o expuestas a la bolsa.</p>
+<div class="qi-badges">
+<span class="qi-badge">Revisión mensual</span>
+<span class="qi-badge">Selección cuantitativa</span>
+<span class="qi-badge">Universo: S&amp;P 500 · Russell 1000 · Nasdaq 100</span>
+</div>
+<details class="qi-details">
+<summary>Cómo se transforma la señal en una cartera ⓘ</summary>
+<p>El ISI compara las acciones entre sí: asigna puntuaciones y produce un ranking, pero no pretende anticipar cuánto subirá o bajará cada empresa. En cada revisión mensual, la estrategia selecciona las <em>n</em> acciones mejor clasificadas y actualiza la cartera de forma sistemática.</p>
+<p>La presentación menciona como universo de referencia el S&amp;P 500, el Russell 1000 y el Nasdaq 100. No detalla aquí todos los filtros, ponderaciones ni reglas de ejecución, por lo que conviene consultar la documentación completa para reproducir el proceso.</p>
+<p>También señala que un posible sesgo de supervivencia aún no está confirmado y requiere más investigación. La presentación considera que las operaciones serían ejecutables con tamaños razonables; esa conclusión depende de los datos y supuestos de ejecución utilizados y no constituye una auditoría independiente.</p>
+</details>
+</article>
+<aside class="qi-summary">
+<span>Una comparación de largo plazo · asignación Qi del 40%</span>
+<strong>29,3%–35,2%</strong>
+<span>Las tres carteras registran un CAGR de 29,3% a 35,2% en esta comparación; el S&amp;P 500 registra 9,0%. Son resultados históricos de la presentación, no una previsión.</span>
+<span class="qi-note">La ventana reúne 248 meses: 218 de backtest y los 30 meses finales que la presentación denomina “auditables”. Más abajo se muestran por separado para que no se confundan ambos periodos.</span>
+</aside>
+</div>
+<div class="intro-row" style="margin:42px 0 18px">
+<div>
+<div class="section-kicker">DEL SEÑAL A LA CARTERA</div>
+<h3 class="section-title" style="font-size:32px">Tres pasos cada mes</h3>
+<p class="section-lede">La lógica se puede resumir así: comparar, seleccionar y decidir cuánto de la cartera se asigna a cada componente.</p>
+</div>
+</div>
+<div class="steps">
+<article class="step">
+<span class="step-no">01</span>
+<h3>Ordenar</h3>
+<p>El ISI puntúa las acciones del universo de referencia por la persistencia relativa de su comportamiento reciente.</p>
+</article>
+<article class="step">
+<span class="step-no">02</span>
+<h3>Seleccionar</h3>
+<p>La estrategia toma las acciones mejor clasificadas y revisa sus posiciones en el siguiente ciclo mensual.</p>
+</article>
+<article class="step">
+<span class="step-no">03</span>
+<h3>Combinar</h3>
+<p>La parte no asignada a Qi se reparte entre efectivo y el S&amp;P 500 según la estructura elegida: Takeoff, Cruise o Zenith.</p>
+</article>
+</div>
+<div class="intro-row" style="margin:46px 0 18px">
+<div>
+<div class="section-kicker">TRES ESTRUCTURAS DE CARTERA</div>
+<h3 class="section-title" style="font-size:32px">La misma señal, distintas exposiciones</h3>
+<p class="section-lede">Las gamas cambian la combinación de activos; los resultados de abajo comparan una asignación Qi del 40%.</p>
+</div>
+</div>
+<div class="qi-grid">
+<article class="qi-family">
+<span class="evidence-label">01 · TAKEOFF</span>
+<h3>Qi + monetario</h3>
+<p>Una vez fijada la asignación a Qi, el resto se mantiene en un activo monetario. Esta estructura reduce la exposición a la bolsa frente a las otras dos opciones, aunque no elimina el riesgo de pérdida.</p>
+<div class="qi-mix">Perfil ilustrativo: de defensivo a dinámico. Takeoff 40: beta 0,63 y drawdown máximo −24,0% en la comparación de 248 meses.</div>
+</article>
+<article class="qi-family">
+<span class="evidence-label">02 · CRUISE</span>
+<h3>Qi + S&amp;P 500 + monetario</h3>
+<p>El capital que no se asigna a Qi se reparte por igual entre el S&amp;P 500 y un activo monetario. Es una combinación intermedia: conserva exposición a la bolsa y mantiene también una parte monetaria.</p>
+<div class="qi-mix">Perfil ilustrativo: de moderado a crecimiento. Cruise 40: beta 0,93 y drawdown máximo −37,0%.</div>
+</article>
+<article class="qi-family">
+<span class="evidence-label">03 · ZENITH</span>
+<h3>Qi + S&amp;P 500</h3>
+<p>El resto de la cartera se invierte en el S&amp;P 500. De las tres estructuras, es la que mantiene una mayor exposición a la renta variable.</p>
+<div class="qi-mix">Perfil ilustrativo: agresivo o muy agresivo. Zenith 40: beta 1,23 y drawdown máximo −49,0%.</div>
+</article>
+</div>
+<article class="qi-panel qi-explorer" id="comparador">
+<span class="evidence-label">COMPARADOR INTERACTIVO</span>
+<h3>Cómo cambian las tres carteras según la métrica y el periodo</h3>
+<p>Selecciona una métrica y el periodo mostrado en la presentación. Las barras permiten comparar las tres estructuras con el S&amp;P 500 como referencia; no representan una previsión.</p>
+<div class="qi-explorer-controls">
+<label for="qiPeriod">Periodo<select id="qiPeriod"><option value="overall">Comparación de 248 meses</option><option value="backtest">Backtest · 218 meses</option><option value="auditable">Periodo “auditable” · 30 meses</option></select></label>
+<label for="qiMetric">Métrica<select id="qiMetric"><option value="cagr">CAGR</option><option value="drawdown">Caída máxima</option><option value="sharpe">Sharpe</option><option value="beta">Beta</option></select></label>
+</div>
+<svg class="qi-explorer-chart" id="qiExplorerChart" role="img" aria-labelledby="qiExplorerTitle qiExplorerDesc" viewBox="0 0 900 310" preserveAspectRatio="xMidYMid meet"><title id="qiExplorerTitle">Comparación de carteras Qi</title><desc id="qiExplorerDesc">Gráfico de barras interactivo que compara las métricas históricas de Takeoff, Cruise, Zenith y el S&amp;P 500.</desc></svg>
+<p class="qi-explorer-live" id="qiExplorerLive" aria-live="polite"></p>
+<p class="qi-explorer-note">Los datos proceden de las tablas de esta página. El periodo de 30 meses es la denominación de la presentación y no equivale por sí solo a una auditoría independiente.</p>
+</article>
+<div class="qi-tables">
+<article class="qi-panel">
+<span class="evidence-label">UNA MISMA ASIGNACIÓN QI, TRES COMBINACIONES</span>
+<h3>Qué cambia al combinar Qi de tres maneras</h3>
+<p>Para comparar las estructuras en condiciones similares, la presentación fija la asignación a Qi en 40% y muestra una ventana de 248 meses. La tabla resume crecimiento, caídas y otras medidas de riesgo. Cada valor se conserva tal como aparece en esa comparación.</p>
+<div class="qi-table-wrap">
+<table class="qi-table">
+<thead>
+<tr>
+<th>Métrica</th>
+<th>Takeoff 40</th>
+<th>Cruise 40</th>
+<th>Zenith 40</th>
+<th>S&amp;P 500</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CAGR <details class="qi-tip">
+<summary aria-label="Qué significa CAGR">i</summary>
+<span>Tasa anual compuesta equivalente: resume el crecimiento entre inicio y final. No quiere decir que la inversión rindiera lo mismo cada año.</span>
+</details>
+</td>
+<td>29,3%</td>
+<td>32,4%</td>
+<td>35,2%</td>
+<td>9,0%</td>
+</tr>
+<tr>
+<td>Caída máxima <details class="qi-tip">
+<summary aria-label="Qué significa caída máxima">i</summary>
+<span>La mayor bajada desde un máximo previo hasta un mínimo posterior dentro del periodo analizado. Mide una caída histórica, no el límite de una pérdida futura.</span>
+</details>
+</td>
+<td>−24,0%</td>
+<td>−37,0%</td>
+<td>−49,0%</td>
+<td>−52,6%</td>
+</tr>
+<tr>
+<td>Sharpe <details class="qi-tip">
+<summary aria-label="Qué significa Sharpe">i</summary>
+<span>Relaciona el exceso de rentabilidad con la variabilidad de los retornos. Cuanto mayor, mejor fue esa relación histórica, bajo los supuestos del cálculo.</span>
+</details>
+</td>
+<td>0,90</td>
+<td>0,94</td>
+<td>0,97</td>
+<td>0,65</td>
+</tr>
+<tr>
+<td>Calmar <details class="qi-tip">
+<summary aria-label="Qué significa Calmar">i</summary>
+<span>Compara la rentabilidad anualizada con la caída máxima. Ayuda a contextualizar el retorno respecto a la peor caída registrada.</span>
+</details>
+</td>
+<td>1,22</td>
+<td>0,88</td>
+<td>0,72</td>
+<td>0,17</td>
+</tr>
+<tr>
+<td>Volatilidad</td>
+<td>32,8%</td>
+<td>34,4%</td>
+<td>36,5%</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Beta <details class="qi-tip">
+<summary aria-label="Qué significa beta">i</summary>
+<span>Estima cuánto se ha movido una cartera en relación con el S&amp;P 500. Una beta de 1 suele indicar una sensibilidad similar en la ventana analizada; no mide todo el riesgo.</span>
+</details>
+</td>
+<td>0,63</td>
+<td>0,93</td>
+<td>1,23</td>
+<td>1,00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="qi-note">La volatilidad del S&amp;P 500 no está indicada en esta comparación y por eso aparece como “—”. Las métricas describen cómo se comportaron las carteras en esta ventana concreta; no permiten anticipar cómo se comportarán en otro periodo.</p>
+</article>
+<article class="qi-panel">
+<span class="evidence-label">OTRA LECTURA: LOS PERIODOS POR SEPARADO</span>
+<h3>Qué ocurrió en el backtest y en el tramo posterior</h3>
+<p>La presentación también desglosa la trayectoria en dos periodos: 218 meses de backtest, de enero de 2006 a febrero de 2024, y 30 meses posteriores, de marzo de 2024 a agosto de 2026, que denomina “auditables”. La tabla mantiene ambos tramos separados. No deben sumarse ni leerse como si tuvieran el mismo grado de evidencia.</p>
+<div class="qi-table-wrap">
+<table class="qi-table">
+<thead>
+<tr>
+<th>Estrategia</th>
+<th>Periodo</th>
+<th>CAGR</th>
+<th>Caída máx.</th>
+<th>Volatilidad</th>
+<th>Sharpe</th>
+<th>Beta</th>
+<th>UW medio (meses)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="period">
+<td>Takeoff 40</td>
+<td>Backtest</td>
+<td>26,5%</td>
+<td>−24,0%</td>
+<td>34,1%</td>
+<td>0,80</td>
+<td>0,59</td>
+<td>4,8</td>
+</tr>
+<tr>
+<td>Takeoff 40</td>
+<td>Auditable</td>
+<td>39,9%</td>
+<td>−14,2%</td>
+<td>21,9%</td>
+<td>1,66</td>
+<td>1,05</td>
+<td>3,0</td>
+</tr>
+<tr class="period">
+<td>Cruise 40</td>
+<td>Backtest</td>
+<td>29,2%</td>
+<td>−37,0%</td>
+<td>35,7%</td>
+<td>0,84</td>
+<td>0,89</td>
+<td>4,6</td>
+</tr>
+<tr>
+<td>Cruise 40</td>
+<td>Auditable</td>
+<td>45,9%</td>
+<td>−16,2%</td>
+<td>24,2%</td>
+<td>1,70</td>
+<td>1,35</td>
+<td>3,3</td>
+</tr>
+<tr class="period">
+<td>Zenith 40</td>
+<td>Backtest</td>
+<td>31,7%</td>
+<td>−49,0%</td>
+<td>37,7%</td>
+<td>0,87</td>
+<td>1,19</td>
+<td>5,1</td>
+</tr>
+<tr>
+<td>Zenith 40</td>
+<td>Auditable</td>
+<td>51,8%</td>
+<td>−18,1%</td>
+<td>26,8%</td>
+<td>1,71</td>
+<td>1,65</td>
+<td>3,3</td>
+</tr>
+<tr class="period">
+<td>S&amp;P 500</td>
+<td>Backtest</td>
+<td>8,1%</td>
+<td>−52,6%</td>
+<td>15,5%</td>
+<td>0,58</td>
+<td>1,00</td>
+<td>6,3</td>
+</tr>
+<tr>
+<td>S&amp;P 500</td>
+<td>Auditable</td>
+<td>16,2%</td>
+<td>−7,8%</td>
+<td>12,1%</td>
+<td>1,31</td>
+<td>1,00</td>
+<td>1,7</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="qi-note">“Auditable” es el término que utiliza la presentación para esos 30 meses; no significa por sí solo que los datos hayan recibido una auditoría independiente. Además, el tramo ocurrió en un mercado alcista y es demasiado breve para confirmar cómo se comportaría la estrategia en distintos entornos. No equivale a un historial largo ni garantiza resultados futuros.</p>
+<details class="qi-details">
+<summary>Por qué no coinciden algunos CAGR ⓘ</summary>
+<p>Takeoff 40 aparece con un CAGR de 29,3% en la comparación de 248 meses, 26,5% en el backtest y 39,9% en el tramo auditable. Son cifras de periodos y tablas distintos. La presentación no ofrece aquí una reconciliación entre ellas, así que las mantenemos asociadas a su contexto y no las mezclamos.</p>
+</details>
+</article>
+</div>
+<article class="qi-panel" style="margin-top:18px">
+<span class="evidence-label">PARA LEER LAS MÉTRICAS</span>
+<h3>Qué significa cada indicador</h3>
+<div class="qi-glossary">
+<article>
+<b>ISI</b>
+<p>Inertial Synthetic Index: puntuación propietaria que ordena acciones según la persistencia relativa de su comportamiento reciente. Es una clasificación, no una predicción de rentabilidad.</p>
+</article>
+<article>
+<b>Beta</b>
+<p>Relación histórica entre los movimientos de una cartera y los del S&amp;P 500. Una beta de 1 sugiere una sensibilidad similar en el periodo medido, pero no resume todos los riesgos.</p>
+</article>
+<article>
+<b>Sharpe</b>
+<p>Compara el exceso de rentabilidad con la variabilidad de los retornos, según una tasa de referencia y unos supuestos de cálculo. Resume una relación histórica; no mide todo el riesgo.</p>
+</article>
+<article>
+<b>Calmar</b>
+<p>Relaciona la rentabilidad anualizada con la caída máxima; ayuda a poner el retorno en contexto con la peor caída registrada.</p>
+</article>
+<article>
+<b>Caída máxima</b>
+<p>Mayor descenso desde un máximo previo hasta un mínimo posterior. Por ejemplo, una caída del 24% lleva 100 a 76; después haría falta una subida mayor del 24% para volver a 100.</p>
+</article>
+<article>
+<b>Volatilidad</b>
+<p>Cuánto varían los retornos. Una cifra mayor indica oscilaciones históricas más amplias, tanto al alza como a la baja; no indica por sí sola la dirección futura.</p>
+</article>
+<article>
+<b>UW · Underwater</b>
+<p>Tiempo que la cartera permanece por debajo de un máximo anterior. La tabla muestra el promedio en meses de esos periodos de recuperación.</p>
+</article>
+<article>
+<b>Backtest</b>
+<p>Simulación de cómo habría funcionado una estrategia con datos y reglas históricas. El resultado depende de la calidad de los datos y de los supuestos de ejecución.</p>
+</article>
+<article>
+<b>“Auditable”</b>
+<p>Etiqueta de la presentación para marzo de 2024–agosto de 2026 (30 meses). El término no demuestra, por sí mismo, que haya existido una revisión independiente.</p>
+</article>
+</div>
+</article>
+<p class="qi-note">
+<strong>Cómo interpretar el conjunto.</strong> Las tablas describen resultados históricos y no garantizan resultados futuros. En la comparación principal, la presentación fija Cash = 0%; por tanto, no se añade un rendimiento del activo monetario. Antes de considerar estos resultados replicables, habría que verificar en la documentación completa el tratamiento de comisiones, impuestos, deslizamiento, dividendos y reglas de ejecución. Ninguna de estas estructuras garantiza la protección del capital.</p>
+</div>
+</section>
+</main>
+<footer class="wrap footer">
+<b>Q Investment</b>
+<span>La estrategia Qi · Metodología, resultados y límites de interpretación.</span>
+</footer>
+<script>
+(()=>{
+  const explorer=document.getElementById('qiExplorerChart');
+  const period=document.getElementById('qiPeriod');
+  const metric=document.getElementById('qiMetric');
+  const live=document.getElementById('qiExplorerLive');
+  if(!explorer||!period||!metric||!live)return;
+  const data={
+    overall:{cagr:[29.3,32.4,35.2,9],drawdown:[24,37,49,52.6],sharpe:[.9,.94,.97,.65],beta:[.63,.93,1.23,1]},
+    backtest:{cagr:[26.5,29.2,31.7,8.1],drawdown:[24,37,49,52.6],sharpe:[.8,.84,.87,.58],beta:[.59,.89,1.19,1]},
+    auditable:{cagr:[39.9,45.9,51.8,16.2],drawdown:[14.2,16.2,18.1,7.8],sharpe:[1.66,1.7,1.71,1.31],beta:[1.05,1.35,1.65,1]}
+  };
+  const labels=['Takeoff 40','Cruise 40','Zenith 40','S&P 500'];
+  const metricLabels={cagr:'CAGR',drawdown:'Caída máxima',sharpe:'Sharpe',beta:'Beta'};
+  const periodLabels={overall:'comparación de 248 meses',backtest:'backtest de 218 meses',auditable:'periodo “auditable” de 30 meses'};
+  const format=(value,key)=>key==='cagr'||key==='drawdown'?`${value.toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1})}%`:value.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2});
+  function draw(){
+    const key=metric.value, values=data[period.value][key], max=Math.max(...values)*1.16;
+    const width=900,left=156,right=70,top=34,row=57,barH=26,plot=width-left-right;
+    let marks=`<text class="qi-chart-axis" x="${left}" y="18">${metricLabels[key]} · datos históricos</text>`;
+    [0,.25,.5,.75,1].forEach(step=>{const x=left+plot*step;marks+=`<line class="qi-chart-grid" x1="${x}" y1="${top}" x2="${x}" y2="270"/><text class="qi-chart-axis" x="${x}" y="288" text-anchor="middle">${format(max*step,key)}</text>`});
+    values.forEach((value,index)=>{const y=top+index*row,bar=plot*value/max,benchmark=index===3?' benchmark':'';marks+=`<text class="qi-chart-name" x="${left-12}" y="${y+18}" text-anchor="end">${labels[index]}</text><rect class="qi-chart-bar${benchmark}" x="${left}" y="${y}" width="${bar}" height="${barH}" rx="4"><title>${labels[index]}: ${format(value,key)}</title></rect><text class="qi-chart-value" x="${Math.min(left+bar+9,width-right+24)}" y="${y+18}">${format(value,key)}</text>`});
+    explorer.innerHTML=`<title id="qiExplorerTitle">${metricLabels[key]} por cartera</title><desc id="qiExplorerDesc">${metricLabels[key]} histórico para Takeoff 40, Cruise 40, Zenith 40 y S&amp;P 500 en ${periodLabels[period.value]}.</desc>${marks}`;
+    live.textContent=`Mostrando ${metricLabels[key]} histórico en la ${periodLabels[period.value]}.`;
+  }
+  period.addEventListener('change',draw);metric.addEventListener('change',draw);draw();
+})();
+</script>
+<script>document.querySelectorAll('.language-picker a').forEach(link=>link.addEventListener('click',event=>{if(location.hash){event.preventDefault();location.href=link.getAttribute('href')+location.hash}}));</script>
+<script>
+document.querySelectorAll('.qi-tip').forEach(tip=>{
+  const summary=tip.querySelector('summary');
+  const popup=tip.querySelector('span');
+  const placePopup=()=>{
+    popup.style.visibility='hidden';popup.style.display='block';
+    const trigger=summary.getBoundingClientRect();
+    const bubble=popup.getBoundingClientRect();
+    popup.style.display='';popup.style.visibility='';
+    const left=Math.max(12,Math.min(trigger.left+trigger.width/2-bubble.width/2,window.innerWidth-bubble.width-12));
+    let top=trigger.top-bubble.height-10;
+    if(top<12) top=trigger.bottom+10;
+    top=Math.max(12,Math.min(top,window.innerHeight-bubble.height-12));
+    popup.style.left=`${left}px`;popup.style.top=`${top}px`;
+  };
+  tip.addEventListener('pointerenter',placePopup);
+  tip.addEventListener('focusin',placePopup);
+  summary.addEventListener('click',event=>{
+    if(tip.open){event.preventDefault();tip.open=false;tip.dataset.dismissed='true'}
+    else{tip.dataset.dismissed='false';placePopup()}
+  });
+  tip.addEventListener('mouseleave',()=>{tip.dataset.dismissed='false'});
+  window.addEventListener('resize',()=>{if(tip.matches(':hover,:focus-within,[open]'))placePopup()});
+  window.addEventListener('scroll',()=>{if(tip.matches(':hover,:focus-within,[open]'))placePopup()},{passive:true,capture:true});
+});
+document.addEventListener('click',event=>{
+  if(!event.target.closest('.qi-tip')) document.querySelectorAll('.qi-tip[open]').forEach(tip=>{tip.open=false;tip.dataset.dismissed='true'});
+});
+document.addEventListener('keydown',event=>{
+  if(event.key==='Escape') document.querySelectorAll('.qi-tip[open]').forEach(tip=>{tip.open=false;tip.dataset.dismissed='true'});
+});
+</script>
+</body>
+</html>
