@@ -288,8 +288,7 @@ rankingYear.addEventListener('change',renderRanking);
 document.getElementById('rankingCount').addEventListener('change',renderRanking);
 detail.addEventListener('change',renderRecommendations);
 new ResizeObserver(()=>renderChart(getRange())).observe(chartbox);
-const isSpanish=document.documentElement.lang==='es';const isSpanish=document.documentElement.lang==='es';document.getElementById('coverage').textContent=isSpanish?'Rentabilidades mensuales disponibles: '+DATA.first+'—'+DATA.last+'. Las recomendaciones de '+DATA.latestLabel+' están disponibles; sus rentabilidades futuras siguen pendientes.':'Monthly returns available: '+DATA.first+'—'+DATA.last+'. Recommendations for '+DATA.latestLabel+' are available, but their future returns are pending.'; sus rentabilidades futuras siguen pendientes.':'Monthly returns available: '+DATA.first+'—'+DATA.last+'. Recommendations for '+DATA.latestLabel+' are available, but their future returns are pending.';
-document.getElementById('sourceNote').textContent=`${validMonths.length} months with returns · through ${lastDate}`;
+const isSpanish=document.documentElement.lang==='es';document.getElementById('coverage').textContent=isSpanish?`Rentabilidades mensuales disponibles: ${DATA.first}—${DATA.last}. Las recomendaciones de ${DATA.latestLabel} están disponibles; sus rentabilidades futuras siguen pendientes.`:`Monthly returns available: ${DATA.first}—${DATA.last}. Recommendations for ${DATA.latestLabel} are available, but their future returns are pending.`;document.getElementById('sourceNote').textContent=`${validMonths.length} months with returns · through ${lastDate}`;
 renderRecommendations();renderAnnual();renderRanking();renderLatestSnapshot();update();
 
 // Independent historical view: controls and calculations are separate from
